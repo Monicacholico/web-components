@@ -3,20 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Web Components</title>
-  <script src="modal.js"></script>
+  <script src="tooltip.js"></script>
 </head>
 <body>
-  <uc-modal>
-    <h1 slot="title">The Modal Title</h1>
-    <p>This is our first web component!</p>
-  </uc-modal>
-  <script>
-    const modal = document.querySelector('uc-modal');
-    setTimeout(() => {
-      modal.open();
-    }, 3000);
-  </script>
+  <p><ml-tooltip text="We Component is a set of standards.">Web Components</ml-tooltip> are awesome!</p>
+  <ml-tooltip>We gooooo</ml-tooltip>
 </body>
 </html>
