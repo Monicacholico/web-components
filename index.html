@@ -7,18 +7,32 @@
   <script src="tooltip.js"></script>
   <script src="confirm-link.js"></script>
   <style>
-    div {
-      border: 2px solid orange;
+    html {
+      --color-primary: lightblue;
+      font-family: sans-serif;
     }
+    div {
+      /* border: 2px solid orange; */
+    }
+    /* .highlight {
+      background-color: #fcfcba;
+    } */
+    /* ml-tooltip {
+      border: 1px solid blue;
+      padding: 0.15rem;
+    } */
   </style>
 </head>
 <body>
   <template id="tooltip-template">
 
   </template>  
-  <p><ml-tooltip text="Web Component is a set of standards.">Web Components</ml-tooltip> are awesome!</p>
+  <p><ml-tooltip class="important" text="Web Component is a set of standards.">
+    <span class="highlight">Web Components</span>
+  </ml-tooltip> 
+  are awesome!</p>
   <ml-tooltip></ml-tooltip>
-  <div>This does not get the web component styles!</div>
+  <!-- <div>This does not get the web component styles!</div> -->
   <a is="ml-confirm-link" href="https://www.feel-like-dancing.com">Feel Like Dancing</a>
 </body>
 </html>
