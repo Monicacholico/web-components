@@ -6,16 +6,21 @@ class Button extends HTMLElement {
         // console.log(template)
         // this.shadowRoot.appendChild(template.content.cloneNode(true));
         this.shadowRoot.innerHTML = `
+        <style>
+        p {
+           display: none;
+        }
+        </style>
         <slot></slot><p>More info</p>
         `;
     }
 
     connectedCallback() {
         const newButton = document.createElement('button');
-        newButton.textContent = 'Show Me';
+        newButton.textContent = 'Show';
         this.appendChild(newButton);
 
-        newButton.addEventListener('click', this._showMore.bind(this) )
+        newButton.addEventListener('click', this._showMore.bind(this));
     }
 
     _showMore() {
