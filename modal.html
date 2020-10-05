@@ -17,6 +17,7 @@
 </head>
 <body>
     <ml-modal>
+        <h1 slot="title">Please Confirm</h1>
         <p>With your confirmation you agree to pay the bill amount</p>
     </ml-modal>
   <p id="p-confirm">Please confirm your choice</p>
@@ -24,6 +25,13 @@
   <script>
       const confirmButton = document.querySelector('button');
       const modal = document.querySelector('ml-modal');
+
+      modal.addEventListener('confirm', () => {
+          console.log('Confirmed..')
+      })
+      modal.addEventListener('cancel', () => {
+          console.log('Cancelled..')
+      })
 
       confirmButton.addEventListener('click', () => {
         //   modal.setAttribute('aria-opened', 'true');
