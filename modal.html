@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="modal.js"></script>
+    <title>Modal</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body{
+            margin: 2rem;
+            font-family: sans-serif
+        }
+    </style>
+</head>
+<body>
+    <ml-modal>
+        <p>With your confirmation you agree to pay the bill amount</p>
+    </ml-modal>
+  <p id="p-confirm">Please confirm your choice</p>
+  <button id="show-btn">Show details & Confirm</button>
+  <script>
+      const confirmButton = document.querySelector('button');
+      const modal = document.querySelector('ml-modal');
+
+      confirmButton.addEventListener('click', () => {
+        //   modal.setAttribute('aria-opened', 'true');
+        if(!modal.isOpen) {
+            modal.open();
+            console.log('Opening');
+        }
+        // console.log(modal.isOpen);
+      })
+
+  </script>
+</body>
+</html>
