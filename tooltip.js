@@ -84,7 +84,6 @@ class Tooltip extends HTMLElement {
       this.shadowRoot.appendChild(tooltipContainer);
     } else {
       if (tooltipContainer) {
-        console.log(tooltipContainer);
         this.shadowRoot.removeChild(tooltipContainer);
       }
     }
